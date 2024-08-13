@@ -2,6 +2,7 @@
 """
 Function to count words in all hot posts of a given Reddit subreddit.
 """
+
 import requests
 
 
@@ -10,7 +11,7 @@ def count_words(subreddit, word_list, after=None, counts={}):
     Recursive function that queries the Reddit API, parses the title of al
     hot articles, and prints a sorted count of given keywords
     """
-    
+
     if not word_list or word_list == [] or not subreddit:
         return
 

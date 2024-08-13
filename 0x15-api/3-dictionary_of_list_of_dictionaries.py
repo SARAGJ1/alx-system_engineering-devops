@@ -31,6 +31,8 @@ def fetch_user_data():
     return data_to_export
 
 if __name__ == "__main__":
+    """Write the data to a JSON file"""
+
     data_to_export = fetch_user_data()
     with open("todo_all_employees.json", "w") as jsonfile:
         json.dump(data_to_export, jsonfile, indent=4)

@@ -10,7 +10,7 @@ import requests
 
 def fetch_user_data():
     """Fetch user information and to-do lists for all employees."""
-    
+
     url = "https://jsonplaceholder.typicode.com/"
     users = requests.get(url + "users").json()
 
@@ -30,8 +30,8 @@ def fetch_user_data():
 
     return data_to_export
 
+
 if __name__ == "__main__":
-    """Write the data to a JSON file"""
 
     data_to_export = fetch_user_data()
     with open("todo_all_employees.json", "w") as jsonfile:
